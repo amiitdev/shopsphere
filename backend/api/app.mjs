@@ -94370,7 +94370,7 @@ var router4 = (0, import_express4.Router)();
 function wrap3(fn) {
   return (req, res, next) => Promise.resolve(fn(req, res, next)).catch(next);
 }
-router4.post("/", optionalAuth, forbidAdmin, wrap3(createOrder));
+router4.post("/", requireAuth, forbidAdmin, wrap3(createOrder));
 router4.get("/", requireAuth, requireAdmin, wrap3(adminListOrders));
 router4.patch("/:id/status", requireAuth, requireAdmin, wrap3(adminUpdateOrderStatus));
 router4.patch("/:id/items/:productId/status", requireAuth, requireAdmin, wrap3(adminUpdateOrderItemStatus));
