@@ -9,7 +9,11 @@ import { config } from "../config";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 export const uploadsDir = path.join(__dirname, "..", "..", "uploads");
 
-fs.mkdirSync(uploadsDir, { recursive: true });
+try {
+  fs.mkdirSync(uploadsDir, { recursive: true });
+} catch {
+  // Ignore on Vercel serverless (read-only filesystem)
+}
 
 export const MAX_UPLOAD_BYTES = 5 * 1024 * 1024;
 
@@ -20,14 +24,15 @@ const EXT_BY_MIME: Record<string, string> = {
   "image/webp": ".webp",
 };
 
-function createUpload(): multer.Multer {
+async function createUpload(): Promise<multer.Multer> {
   // Cloudinary storage for Vercel
   if (config.cloudinaryUrl) {
-    // eslint-disable-next-line @typescript-eslint/no-var-requires
-    const { CloudinaryStorage } = require("multer-storage-cloudinary");
-    // eslint-disable-next-line @typescript-eslint/no-var-requires
-    const cloudinary = require("cloudinary").v2;
+    const cloudinaryMod = await import("cloudinary");
+    const cloudinary = (cloudinaryMod as any).v2;
     cloudinary.config({ cloudinary_url: config.cloudinaryUrl });
+
+    const storageMod = await import("multer-storage-cloudinary");
+    const { CloudinaryStorage } = storageMod as any;
 
     const storage = new CloudinaryStorage({
       cloudinary,
@@ -69,4 +74,22 @@ function createUpload(): multer.Multer {
   });
 }
 
-export const uploadImage = createUpload();
+// Lazy init — resolved on first request
+let _uploadImage: multer.Multer | null = null;
+
+export async function getUploadImage(): Promise<multer.Multer> {
+  if (!_uploadImage) _uploadImage = await createUpload();
+  return _uploadImage;
+}
+
+// Sync export for routes that don't use Cloudinary
+export const uploadImage = {
+  single(field: string) {
+    return async (req: any, res: any, next: any) => {
+      try {
+        const uploader = await getUploadImage();
+        return uploader.single(field)(req, res, next);
+      } catch (e) { next(e); }
+    };
+  },
+};
