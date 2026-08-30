@@ -93867,10 +93867,11 @@ var loginSchema = external_exports.object({
   password: external_exports.string().min(1)
 });
 function setAuthCookie(res, token) {
+  const isProd = config.nodeEnv === "production";
   res.cookie(config.authTokenName, token, {
     httpOnly: true,
-    secure: config.nodeEnv === "production",
-    sameSite: "lax",
+    secure: isProd,
+    sameSite: isProd ? "none" : "lax",
     maxAge: 7 * 24 * 60 * 60 * 1e3
   });
 }
@@ -93906,10 +93907,11 @@ async function login2(req, res) {
   res.json({ user });
 }
 async function logout(_req, res) {
+  const isProd = config.nodeEnv === "production";
   res.cookie(config.authTokenName, "", {
     httpOnly: true,
-    secure: config.nodeEnv === "production",
-    sameSite: "lax",
+    secure: isProd,
+    sameSite: isProd ? "none" : "lax",
     maxAge: 0
   });
   res.json({});

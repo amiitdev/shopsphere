@@ -15,10 +15,11 @@ const loginSchema = z.object({
 });
 
 function setAuthCookie(res: Response, token: string) {
+  const isProd = config.nodeEnv === "production";
   res.cookie(config.authTokenName, token, {
     httpOnly: true,
-    secure: config.nodeEnv === "production",
-    sameSite: "lax",
+    secure: isProd,
+    sameSite: isProd ? "none" : "lax",
     maxAge: 7 * 24 * 60 * 60 * 1000,
   });
 }
@@ -57,10 +58,11 @@ export async function login(req: Request, res: Response) {
 }
 
 export async function logout(_req: Request, res: Response) {
+  const isProd = config.nodeEnv === "production";
   res.cookie(config.authTokenName, "", {
     httpOnly: true,
-    secure: config.nodeEnv === "production",
-    sameSite: "lax",
+    secure: isProd,
+    sameSite: isProd ? "none" : "lax",
     maxAge: 0,
   });
   res.json({});
