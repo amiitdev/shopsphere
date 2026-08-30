@@ -4,7 +4,6 @@
       "maxDuration": 30
     }
   },
-  "outputDirectory": "public",
   "rewrites": [
     { "source": "/(.*)", "destination": "/api" }
   ]
