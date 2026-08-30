@@ -1,0 +1,25 @@
+- generic [ref=f1e2]:
+  - navigation [ref=f1e3]:
+    - generic [ref=f1e4]:
+      - link "ShopSphere" [ref=f1e5] [cursor=pointer]:
+        - /url: /
+      - button "Toggle menu" [ref=f1e6]
+      - generic [ref=f1e7]:
+        - link "Login" [ref=f1e8] [cursor=pointer]:
+          - /url: /login
+        - link "Sign Up" [ref=f1e9] [cursor=pointer]:
+          - /url: /signup
+        - button "Choose accent color" [ref=f1e11] [cursor=pointer]
+        - button "Toggle theme" [ref=f1e13] [cursor=pointer]: ☀
+        - button "Cart with 0 items" [ref=f1e14] [cursor=pointer]: 🛒
+  - complementary [ref=f1e15]:
+    - generic [ref=f1e16]:
+      - heading "Your Cart (0)" [level=2] [ref=f1e17]
+      - button "Close cart" [ref=f1e18] [cursor=pointer]: ✕
+    - generic [ref=f1e19]:
+      - paragraph [ref=f1e20]: Your cart is empty
+      - link "Browse Products" [ref=f1e21] [cursor=pointer]:
+        - /url: /
+  - main [ref=f1e22]:
+    - generic [ref=f1e23]: Loading...
+  - status

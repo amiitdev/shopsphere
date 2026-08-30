@@ -1,0 +1,111 @@
+[     133ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ http://127.0.0.1:5173/node_modules/.vite/deps/chunk-BCXODTBQ.js?v=2f6e0250:21548
+[     181ms] [WARNING] ⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition. @ http://127.0.0.1:5173/node_modules/.vite/deps/react-router-dom.js?v=2f6e0250:4414
+[     181ms] [WARNING] ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath. @ http://127.0.0.1:5173/node_modules/.vite/deps/react-router-dom.js?v=2f6e0250:4414
+[  198480ms] ReferenceError: FaSearch is not defined
+    at AdminProducts (http://127.0.0.1:5173/src/pages/admin/AdminProducts.tsx?t=1787985612946:175:32)
+    at renderWithHooks (http://127.0.0.1:5173/node_modules/.vite/deps/chunk-BCXODTBQ.js?v=2f6e0250:11546:26)
+    at updateFunctionComponent (http://127.0.0.1:5173/node_modules/.vite/deps/chunk-BCXODTBQ.js?v=2f6e0250:14580:28)
+    at beginWork (http://127.0.0.1:5173/node_modules/.vite/deps/chunk-BCXODTBQ.js?v=2f6e0250:15922:22)
+    at HTMLUnknownElement.callCallback2 (http://127.0.0.1:5173/node_modules/.vite/deps/chunk-BCXODTBQ.js?v=2f6e0250:3672:22)
+    at Object.invokeGuardedCallbackDev (http://127.0.0.1:5173/node_modules/.vite/deps/chunk-BCXODTBQ.js?v=2f6e0250:3697:24)
+    at invokeGuardedCallback (http://127.0.0.1:5173/node_modules/.vite/deps/chunk-BCXODTBQ.js?v=2f6e0250:3731:39)
+    at beginWork$1 (http://127.0.0.1:5173/node_modules/.vite/deps/chunk-BCXODTBQ.js?v=2f6e0250:19763:15)
+    at performUnitOfWork (http://127.0.0.1:5173/node_modules/.vite/deps/chunk-BCXODTBQ.js?v=2f6e0250:19196:20)
+    at workLoopSync (http://127.0.0.1:5173/node_modules/.vite/deps/chunk-BCXODTBQ.js?v=2f6e0250:19135:13)
+[  198486ms] ReferenceError: FaSearch is not defined
+    at AdminProducts (http://127.0.0.1:5173/src/pages/admin/AdminProducts.tsx?t=1787985612946:175:32)
+    at renderWithHooks (http://127.0.0.1:5173/node_modules/.vite/deps/chunk-BCXODTBQ.js?v=2f6e0250:11546:26)
+    at updateFunctionComponent (http://127.0.0.1:5173/node_modules/.vite/deps/chunk-BCXODTBQ.js?v=2f6e0250:14580:28)
+    at beginWork (http://127.0.0.1:5173/node_modules/.vite/deps/chunk-BCXODTBQ.js?v=2f6e0250:15922:22)
+    at HTMLUnknownElement.callCallback2 (http://127.0.0.1:5173/node_modules/.vite/deps/chunk-BCXODTBQ.js?v=2f6e0250:3672:22)
+    at Object.invokeGuardedCallbackDev (http://127.0.0.1:5173/node_modules/.vite/deps/chunk-BCXODTBQ.js?v=2f6e0250:3697:24)
+    at invokeGuardedCallback (http://127.0.0.1:5173/node_modules/.vite/deps/chunk-BCXODTBQ.js?v=2f6e0250:3731:39)
+    at beginWork$1 (http://127.0.0.1:5173/node_modules/.vite/deps/chunk-BCXODTBQ.js?v=2f6e0250:19763:15)
+    at performUnitOfWork (http://127.0.0.1:5173/node_modules/.vite/deps/chunk-BCXODTBQ.js?v=2f6e0250:19196:20)
+    at workLoopSync (http://127.0.0.1:5173/node_modules/.vite/deps/chunk-BCXODTBQ.js?v=2f6e0250:19135:13)
+[  198489ms] [ERROR] The above error occurred in the <AdminProducts> component:
+
+    at AdminProducts (http://127.0.0.1:5173/src/pages/admin/AdminProducts.tsx?t=1787985612946:41:25)
+    at RenderedRoute (http://127.0.0.1:5173/node_modules/.vite/deps/react-router-dom.js?v=2f6e0250:4110:5)
+    at Outlet (http://127.0.0.1:5173/node_modules/.vite/deps/react-router-dom.js?v=2f6e0250:4516:26)
+    at main
+    at div
+    at AdminLayout (http://127.0.0.1:5173/src/pages/admin/AdminLayout.tsx:23:27)
+    at RenderedRoute (http://127.0.0.1:5173/node_modules/.vite/deps/react-router-dom.js?v=2f6e0250:4110:5)
+    at Outlet (http://127.0.0.1:5173/node_modules/.vite/deps/react-router-dom.js?v=2f6e0250:4516:26)
+    at AdminRoute (http://127.0.0.1:5173/src/components/AdminRoute.tsx:20:23)
+    at RenderedRoute (http://127.0.0.1:5173/node_modules/.vite/deps/react-router-dom.js?v=2f6e0250:4110:5)
+    at Routes (http://127.0.0.1:5173/node_modules/.vite/deps/react-router-dom.js?v=2f6e0250:4580:5)
+    at main
+    at App (http://127.0.0.1:5173/src/App.tsx?t=1787985353882:38:35)
+    at CartProvider (http://127.0.0.1:5173/src/context/CartContext.tsx:37:32)
+    at AuthProvider (http://127.0.0.1:5173/src/context/AuthContext.tsx:27:32)
+    at ToastProvider (http://127.0.0.1:5173/src/context/ToastContext.tsx?t=1787985353882:55:33)
+    at Router (http://127.0.0.1:5173/node_modules/.vite/deps/react-router-dom.js?v=2f6e0250:4523:15)
+    at BrowserRouter (http://127.0.0.1:5173/node_modules/.vite/deps/react-router-dom.js?v=2f6e0250:5261:5)
+
+Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries. @ http://127.0.0.1:5173/node_modules/.vite/deps/chunk-BCXODTBQ.js?v=2f6e0250:14029
+[  198493ms] ReferenceError: FaSearch is not defined
+    at AdminProducts (http://127.0.0.1:5173/src/pages/admin/AdminProducts.tsx?t=1787985612946:175:32)
+    at renderWithHooks (http://127.0.0.1:5173/node_modules/.vite/deps/chunk-BCXODTBQ.js?v=2f6e0250:11546:26)
+    at updateFunctionComponent (http://127.0.0.1:5173/node_modules/.vite/deps/chunk-BCXODTBQ.js?v=2f6e0250:14580:28)
+    at beginWork (http://127.0.0.1:5173/node_modules/.vite/deps/chunk-BCXODTBQ.js?v=2f6e0250:15922:22)
+    at beginWork$1 (http://127.0.0.1:5173/node_modules/.vite/deps/chunk-BCXODTBQ.js?v=2f6e0250:19751:22)
+    at performUnitOfWork (http://127.0.0.1:5173/node_modules/.vite/deps/chunk-BCXODTBQ.js?v=2f6e0250:19196:20)
+    at workLoopSync (http://127.0.0.1:5173/node_modules/.vite/deps/chunk-BCXODTBQ.js?v=2f6e0250:19135:13)
+    at renderRootSync (http://127.0.0.1:5173/node_modules/.vite/deps/chunk-BCXODTBQ.js?v=2f6e0250:19114:15)
+    at recoverFromConcurrentError (http://127.0.0.1:5173/node_modules/.vite/deps/chunk-BCXODTBQ.js?v=2f6e0250:18734:28)
+    at performSyncWorkOnRoot (http://127.0.0.1:5173/node_modules/.vite/deps/chunk-BCXODTBQ.js?v=2f6e0250:18877:28)
+[ 1529549ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ http://127.0.0.1:5173/node_modules/.vite/deps/chunk-BCXODTBQ.js?v=2f6e0250:21548
+[ 1529651ms] [WARNING] ⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition. @ http://127.0.0.1:5173/node_modules/.vite/deps/react-router-dom.js?v=2f6e0250:4414
+[ 1529651ms] [WARNING] ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath. @ http://127.0.0.1:5173/node_modules/.vite/deps/react-router-dom.js?v=2f6e0250:4414
+[ 1529669ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:5173/api/cart/a3033e9b-bf99-4752-ad0b-a35a448680a4:0
+[ 1529710ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:5173/api/cart/a3033e9b-bf99-4752-ad0b-a35a448680a4:0
+[ 1541078ms] Error: useAuth must be used within AuthProvider
+    at useAuth (http://127.0.0.1:5173/src/context/AuthContext.tsx?t=1787986943286:70:19)
+    at App (http://127.0.0.1:5173/src/App.tsx?t=1787986943286:39:20)
+    at renderWithHooks (http://127.0.0.1:5173/node_modules/.vite/deps/chunk-BCXODTBQ.js?v=2f6e0250:11546:26)
+    at mountIndeterminateComponent (http://127.0.0.1:5173/node_modules/.vite/deps/chunk-BCXODTBQ.js?v=2f6e0250:14924:21)
+    at beginWork (http://127.0.0.1:5173/node_modules/.vite/deps/chunk-BCXODTBQ.js?v=2f6e0250:15912:22)
+    at HTMLUnknownElement.callCallback2 (http://127.0.0.1:5173/node_modules/.vite/deps/chunk-BCXODTBQ.js?v=2f6e0250:3672:22)
+    at Object.invokeGuardedCallbackDev (http://127.0.0.1:5173/node_modules/.vite/deps/chunk-BCXODTBQ.js?v=2f6e0250:3697:24)
+    at invokeGuardedCallback (http://127.0.0.1:5173/node_modules/.vite/deps/chunk-BCXODTBQ.js?v=2f6e0250:3731:39)
+    at beginWork$1 (http://127.0.0.1:5173/node_modules/.vite/deps/chunk-BCXODTBQ.js?v=2f6e0250:19763:15)
+    at performUnitOfWork (http://127.0.0.1:5173/node_modules/.vite/deps/chunk-BCXODTBQ.js?v=2f6e0250:19196:20)
+[ 1541083ms] Error: useAuth must be used within AuthProvider
+    at useAuth (http://127.0.0.1:5173/src/context/AuthContext.tsx?t=1787986943286:70:19)
+    at App (http://127.0.0.1:5173/src/App.tsx?t=1787986943286:39:20)
+    at renderWithHooks (http://127.0.0.1:5173/node_modules/.vite/deps/chunk-BCXODTBQ.js?v=2f6e0250:11546:26)
+    at mountIndeterminateComponent (http://127.0.0.1:5173/node_modules/.vite/deps/chunk-BCXODTBQ.js?v=2f6e0250:14924:21)
+    at beginWork (http://127.0.0.1:5173/node_modules/.vite/deps/chunk-BCXODTBQ.js?v=2f6e0250:15912:22)
+    at HTMLUnknownElement.callCallback2 (http://127.0.0.1:5173/node_modules/.vite/deps/chunk-BCXODTBQ.js?v=2f6e0250:3672:22)
+    at Object.invokeGuardedCallbackDev (http://127.0.0.1:5173/node_modules/.vite/deps/chunk-BCXODTBQ.js?v=2f6e0250:3697:24)
+    at invokeGuardedCallback (http://127.0.0.1:5173/node_modules/.vite/deps/chunk-BCXODTBQ.js?v=2f6e0250:3731:39)
+    at beginWork$1 (http://127.0.0.1:5173/node_modules/.vite/deps/chunk-BCXODTBQ.js?v=2f6e0250:19763:15)
+    at performUnitOfWork (http://127.0.0.1:5173/node_modules/.vite/deps/chunk-BCXODTBQ.js?v=2f6e0250:19196:20)
+[ 1541073ms] [ERROR] The above error occurred in the <App> component:
+
+    at App (http://127.0.0.1:5173/src/App.tsx?t=1787986943286:38:35)
+    at CartProvider (http://127.0.0.1:5173/src/context/CartContext.tsx?t=1787986955516:37:32)
+    at AuthProvider (http://127.0.0.1:5173/src/context/AuthContext.tsx?t=1787986955516:27:32)
+    at ToastProvider (http://127.0.0.1:5173/src/context/ToastContext.tsx?t=1787985353882:55:33)
+    at Router (http://127.0.0.1:5173/node_modules/.vite/deps/react-router-dom.js?v=2f6e0250:4523:15)
+    at BrowserRouter (http://127.0.0.1:5173/node_modules/.vite/deps/react-router-dom.js?v=2f6e0250:5261:5)
+
+Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries. @ http://127.0.0.1:5173/node_modules/.vite/deps/chunk-BCXODTBQ.js?v=2f6e0250:14029
+[ 1541084ms] Error: useAuth must be used within AuthProvider
+    at useAuth (http://127.0.0.1:5173/src/context/AuthContext.tsx?t=1787986943286:70:19)
+    at App (http://127.0.0.1:5173/src/App.tsx?t=1787986943286:39:20)
+    at renderWithHooks (http://127.0.0.1:5173/node_modules/.vite/deps/chunk-BCXODTBQ.js?v=2f6e0250:11546:26)
+    at mountIndeterminateComponent (http://127.0.0.1:5173/node_modules/.vite/deps/chunk-BCXODTBQ.js?v=2f6e0250:14924:21)
+    at beginWork (http://127.0.0.1:5173/node_modules/.vite/deps/chunk-BCXODTBQ.js?v=2f6e0250:15912:22)
+    at beginWork$1 (http://127.0.0.1:5173/node_modules/.vite/deps/chunk-BCXODTBQ.js?v=2f6e0250:19751:22)
+    at performUnitOfWork (http://127.0.0.1:5173/node_modules/.vite/deps/chunk-BCXODTBQ.js?v=2f6e0250:19196:20)
+    at workLoopSync (http://127.0.0.1:5173/node_modules/.vite/deps/chunk-BCXODTBQ.js?v=2f6e0250:19135:13)
+    at renderRootSync (http://127.0.0.1:5173/node_modules/.vite/deps/chunk-BCXODTBQ.js?v=2f6e0250:19114:15)
+    at recoverFromConcurrentError (http://127.0.0.1:5173/node_modules/.vite/deps/chunk-BCXODTBQ.js?v=2f6e0250:18734:28)
+[ 1541618ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ http://127.0.0.1:5173/node_modules/.vite/deps/chunk-BCXODTBQ.js?v=2f6e0250:21548
+[ 1541674ms] [WARNING] ⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition. @ http://127.0.0.1:5173/node_modules/.vite/deps/react-router-dom.js?v=2f6e0250:4414
+[ 1541674ms] [WARNING] ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath. @ http://127.0.0.1:5173/node_modules/.vite/deps/react-router-dom.js?v=2f6e0250:4414

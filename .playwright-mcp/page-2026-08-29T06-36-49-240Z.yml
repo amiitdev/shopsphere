@@ -1,0 +1,261 @@
+- generic [ref=e2]:
+  - navigation [ref=e3]:
+    - generic [ref=e4]:
+      - link "ShopSphere" [ref=e5] [cursor=pointer]:
+        - /url: /
+      - button "Toggle menu" [ref=e6]
+      - generic [ref=e7]:
+        - generic [ref=e36]: ShopSphere Admin
+        - link "Orders" [ref=e37] [cursor=pointer]:
+          - /url: /orders
+        - link "Admin" [ref=e38] [cursor=pointer]:
+          - /url: /admin
+        - button "Logout" [ref=e39] [cursor=pointer]
+        - button "Choose accent color" [ref=e11] [cursor=pointer]
+        - button "Toggle theme" [ref=e13] [cursor=pointer]: ☀
+  - main [ref=e22]:
+    - generic [ref=e40]:
+      - region "Product showcase" [ref=e41]:
+        - generic [ref=e45]:
+          - generic [ref=e46]: Featured Collection
+          - heading "Immersive Sound" [level=1] [ref=e47]
+          - paragraph [ref=e48]: Premium wireless headphones with industry-leading noise cancellation
+          - link "Shop Audio →" [ref=e49] [cursor=pointer]:
+            - /url: /product/1
+            - text: Shop Audio
+            - generic [ref=e50]: →
+        - button "Previous slide" [ref=e51] [cursor=pointer]
+        - button "Next slide" [ref=e54] [cursor=pointer]
+        - tablist "Slide indicators" [ref=e57]:
+          - tab "Go to slide 1" [selected] [ref=e58] [cursor=pointer]
+          - tab "Go to slide 2" [ref=e59] [cursor=pointer]
+          - tab "Go to slide 3" [ref=e60] [cursor=pointer]
+          - tab "Go to slide 4" [ref=e61] [cursor=pointer]
+          - tab "Go to slide 5" [ref=e62] [cursor=pointer]
+          - tab "Go to slide 6" [ref=e63] [cursor=pointer]
+          - tab "Go to slide 7" [ref=e64] [cursor=pointer]
+          - tab "Go to slide 8" [ref=e65] [cursor=pointer]
+      - generic [ref=e67]:
+        - heading "ShopSphere" [level=1] [ref=e68]
+        - paragraph [ref=e69]: Premium essentials, beautifully made
+      - generic [ref=e70]:
+        - searchbox "Search products" [ref=e71]
+        - combobox "Filter by category" [ref=e72]:
+          - option "All categories" [selected]
+          - option "accessories"
+          - option "clothing"
+          - option "electronics"
+          - option "home"
+          - option "jewelry"
+      - generic [ref=e73]:
+        - generic [ref=e74]:
+          - link [ref=e75] [cursor=pointer]:
+            - /url: /product/6a92757cffb13704eae826ad
+            - img "Artisan Olive Wood Cutting Board" [ref=e77]
+            - generic [ref=e78]:
+              - heading "Artisan Olive Wood Cutting Board" [level=3] [ref=e79]
+              - paragraph [ref=e80]: home
+              - paragraph [ref=e81]: $74.00
+              - paragraph [ref=e82]: 4.8 ★ (167)
+          - generic [ref=e83]: View only · admins cannot purchase
+        - generic [ref=e85]:
+          - link [ref=e86] [cursor=pointer]:
+            - /url: /product/6a92757cffb13704eae826ab
+            - img "Bamboo Wireless Charging Pad" [ref=e88]
+            - generic [ref=e89]:
+              - heading "Bamboo Wireless Charging Pad" [level=3] [ref=e90]
+              - paragraph [ref=e91]: electronics
+              - paragraph [ref=e92]: $39.99
+              - paragraph [ref=e93]: 4.5 ★ (298)
+          - generic [ref=e94]: View only · admins cannot purchase
+        - generic [ref=e96]:
+          - link [ref=e97] [cursor=pointer]:
+            - /url: /product/6a92757cffb13704eae826a4
+            - img "Brushed Gold Pendant Necklace" [ref=e99]
+            - generic [ref=e100]:
+              - heading "Brushed Gold Pendant Necklace" [level=3] [ref=e101]
+              - paragraph [ref=e102]: jewelry
+              - paragraph [ref=e103]: $145.00
+              - paragraph [ref=e104]: 4.9 ★ (156)
+          - generic [ref=e105]: View only · admins cannot purchase
+        - generic [ref=e107]:
+          - link [ref=e108] [cursor=pointer]:
+            - /url: /product/6a92757cffb13704eae826ac
+            - img "Cashmere Beanie" [ref=e110]
+            - generic [ref=e111]:
+              - heading "Cashmere Beanie" [level=3] [ref=e112]
+              - paragraph [ref=e113]: clothing
+              - paragraph [ref=e114]: $65.00
+              - paragraph [ref=e115]: 4.7 ★ (201)
+          - generic [ref=e116]: View only · admins cannot purchase
+        - generic [ref=e118]:
+          - link [ref=e119] [cursor=pointer]:
+            - /url: /product/6a92757cffb13704eae826a2
+            - img "Ceramic Pour-Over Coffee Set" [ref=e121]
+            - generic [ref=e122]:
+              - heading "Ceramic Pour-Over Coffee Set" [level=3] [ref=e123]
+              - paragraph [ref=e124]: home
+              - paragraph [ref=e125]: $64.50
+              - paragraph [ref=e126]: 4.6 ★ (178)
+          - generic [ref=e127]: View only · admins cannot purchase
+        - generic [ref=e129]:
+          - link [ref=e130] [cursor=pointer]:
+            - /url: /product/6a92757cffb13704eae826a7
+            - img "Hand-Blown Glass Vase" [ref=e132]
+            - generic [ref=e133]:
+              - heading "Hand-Blown Glass Vase" [level=3] [ref=e134]
+              - paragraph [ref=e135]: home
+              - paragraph [ref=e136]: $52.00
+              - paragraph [ref=e137]: 4.8 ★ (134)
+          - generic [ref=e138]: View only · admins cannot purchase
+        - generic [ref=e140]:
+          - link [ref=e141] [cursor=pointer]:
+            - /url: /product/6a92757cffb13704eae826b1
+            - img "Handmade Soy Candle Set" [ref=e143]
+            - generic [ref=e144]:
+              - heading "Handmade Soy Candle Set" [level=3] [ref=e145]
+              - paragraph [ref=e146]: home
+              - paragraph [ref=e147]: $42.00
+              - paragraph [ref=e148]: 4.8 ★ (345)
+          - generic [ref=e149]: View only · admins cannot purchase
+        - generic [ref=e151]:
+          - link [ref=e152] [cursor=pointer]:
+            - /url: /product/6a92757cffb13704eae826aa
+            - img "Italian Leather Messenger Bag" [ref=e154]
+            - generic [ref=e155]:
+              - heading "Italian Leather Messenger Bag" [level=3] [ref=e156]
+              - paragraph [ref=e157]: accessories
+              - paragraph [ref=e158]: $198.00
+              - paragraph [ref=e159]: 4.9 ★ (189)
+          - generic [ref=e160]: View only · admins cannot purchase
+        - generic [ref=e162]:
+          - link [ref=e163] [cursor=pointer]:
+            - /url: /product/6a92757cffb13704eae826a3
+            - img "Merino Wool Crew Neck" [ref=e165]
+            - generic [ref=e166]:
+              - heading "Merino Wool Crew Neck" [level=3] [ref=e167]
+              - paragraph [ref=e168]: clothing
+              - paragraph [ref=e169]: $89.00
+              - paragraph [ref=e170]: 4.5 ★ (234)
+          - generic [ref=e171]: View only · admins cannot purchase
+        - generic [ref=e173]:
+          - link [ref=e174] [cursor=pointer]:
+            - /url: /product/6a92757cffb13704eae826a0
+            - img "Midnight Pro Wireless Headphones" [ref=e176]
+            - generic [ref=e177]:
+              - heading "Midnight Pro Wireless Headphones" [level=3] [ref=e178]
+              - paragraph [ref=e179]: electronics
+              - paragraph [ref=e180]: $189.99
+              - paragraph [ref=e181]: 4.7 ★ (312)
+          - generic [ref=e182]: View only · admins cannot purchase
+        - generic [ref=e184]:
+          - link [ref=e185] [cursor=pointer]:
+            - /url: /product/6a92757cffb13704eae826a1
+            - img "Minimalist Rose Gold Watch" [ref=e187]
+            - generic [ref=e188]:
+              - heading "Minimalist Rose Gold Watch" [level=3] [ref=e189]
+              - paragraph [ref=e190]: jewelry
+              - paragraph [ref=e191]: $249.00
+              - paragraph [ref=e192]: 4.8 ★ (205)
+          - generic [ref=e193]: View only · admins cannot purchase
+        - generic [ref=e195]:
+          - link [ref=e196] [cursor=pointer]:
+            - /url: /product/6a92757cffb13704eae826a5
+            - img "Organic Cotton Throw Blanket" [ref=e198]
+            - generic [ref=e199]:
+              - heading "Organic Cotton Throw Blanket" [level=3] [ref=e200]
+              - paragraph [ref=e201]: home
+              - paragraph [ref=e202]: $79.99
+              - paragraph [ref=e203]: 4.7 ★ (289)
+          - generic [ref=e204]: View only · admins cannot purchase
+        - generic [ref=e206]:
+          - link [ref=e207] [cursor=pointer]:
+            - /url: /product/6a92757cffb13704eae826b2
+            - img "Polished Marble Desk Organizer" [ref=e209]
+            - generic [ref=e210]:
+              - heading "Polished Marble Desk Organizer" [level=3] [ref=e211]
+              - paragraph [ref=e212]: home
+              - paragraph [ref=e213]: $58.00
+              - paragraph [ref=e214]: 4.6 ★ (112)
+          - generic [ref=e215]: View only · admins cannot purchase
+        - generic [ref=e217]:
+          - link [ref=e218] [cursor=pointer]:
+            - /url: /product/6a92757cffb13704eae826af
+            - img "Precision Pour Gooseneck Kettle" [ref=e220]
+            - generic [ref=e221]:
+              - heading "Precision Pour Gooseneck Kettle" [level=3] [ref=e222]
+              - paragraph [ref=e223]: home
+              - paragraph [ref=e224]: $85.00
+              - paragraph [ref=e225]: 4.7 ★ (256)
+          - generic [ref=e226]: View only · admins cannot purchase
+        - generic [ref=e228]:
+          - link [ref=e229] [cursor=pointer]:
+            - /url: /product/6a92757cffb13704eae826b0
+            - img "Recycled Denim Jacket" [ref=e231]
+            - generic [ref=e232]:
+              - heading "Recycled Denim Jacket" [level=3] [ref=e233]
+              - paragraph [ref=e234]: clothing
+              - paragraph [ref=e235]: $110.00
+              - paragraph [ref=e236]: 4.5 ★ (178)
+          - generic [ref=e237]: View only · admins cannot purchase
+        - generic [ref=e239]:
+          - link [ref=e240] [cursor=pointer]:
+            - /url: /product/6a92757cffb13704eae826a8
+            - img "Silk Sleep Mask" [ref=e242]
+            - generic [ref=e243]:
+              - heading "Silk Sleep Mask" [level=3] [ref=e244]
+              - paragraph [ref=e245]: accessories
+              - paragraph [ref=e246]: $28.00
+              - paragraph [ref=e247]: 4.6 ★ (523)
+          - generic [ref=e248]: View only · admins cannot purchase
+        - generic [ref=e250]:
+          - link [ref=e251] [cursor=pointer]:
+            - /url: /product/6a92757cffb13704eae826a9
+            - img "Smart Home Hub Mini" [ref=e253]
+            - generic [ref=e254]:
+              - heading "Smart Home Hub Mini" [level=3] [ref=e255]
+              - paragraph [ref=e256]: electronics
+              - paragraph [ref=e257]: $129.00
+              - paragraph [ref=e258]: 4.3 ★ (367)
+          - generic [ref=e259]: View only · admins cannot purchase
+        - generic [ref=e261]:
+          - link [ref=e262] [cursor=pointer]:
+            - /url: /product/6a927d745f0f017a6fc40717
+            - img "Sony Earbuds" [ref=e264]
+            - generic [ref=e265]:
+              - heading "Sony Earbuds" [level=3] [ref=e266]
+              - paragraph [ref=e267]: electronics
+              - paragraph [ref=e268]: $35.00
+              - paragraph [ref=e269]: 0 ★ (0)
+          - generic [ref=e270]: View only · admins cannot purchase
+        - generic [ref=e272]:
+          - link [ref=e273] [cursor=pointer]:
+            - /url: /product/6a92757cffb13704eae826ae
+            - img "Sterling Silver Cuff" [ref=e275]
+            - generic [ref=e276]:
+              - heading "Sterling Silver Cuff" [level=3] [ref=e277]
+              - paragraph [ref=e278]: jewelry
+              - paragraph [ref=e279]: $120.00
+              - paragraph [ref=e280]: 4.6 ★ (143)
+          - generic [ref=e281]: View only · admins cannot purchase
+        - generic [ref=e283]:
+          - link [ref=e284] [cursor=pointer]:
+            - /url: /product/6a92757cffb13704eae826a6
+            - img "Titanium Data Key 256GB" [ref=e286]
+            - generic [ref=e287]:
+              - heading "Titanium Data Key 256GB" [level=3] [ref=e288]
+              - paragraph [ref=e289]: electronics
+              - paragraph [ref=e290]: $34.99
+              - paragraph [ref=e291]: 4.4 ★ (412)
+          - generic [ref=e292]: View only · admins cannot purchase
+        - generic [ref=e294]:
+          - link [ref=e295] [cursor=pointer]:
+            - /url: /product/6a92757cffb13704eae826b3
+            - img "Ultralight Down Vest" [ref=e297]
+            - generic [ref=e298]:
+              - heading "Ultralight Down Vest" [level=3] [ref=e299]
+              - paragraph [ref=e300]: clothing
+              - paragraph [ref=e301]: $168.00
+              - paragraph [ref=e302]: 4.7 ★ (234)
+          - generic [ref=e303]: View only · admins cannot purchase
+  - status
