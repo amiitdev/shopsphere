@@ -25,6 +25,7 @@ export function imageUrl(file: string): string {
 
 export function createApp(): Express {
   const app = express();
+  if (isProduction()) app.set("trust proxy", 1);
   app.use(
     helmet({
       hsts: isProduction()

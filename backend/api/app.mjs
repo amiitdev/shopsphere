@@ -94986,6 +94986,7 @@ function imageUrl(file) {
 }
 function createApp() {
   const app = (0, import_express8.default)();
+  if (isProduction()) app.set("trust proxy", 1);
   app.use(
     helmet({
       hsts: isProduction() ? { maxAge: 31536e3, includeSubDomains: true, preload: true } : false,
