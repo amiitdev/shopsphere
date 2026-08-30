@@ -94995,7 +94995,8 @@ function createApp() {
   );
   app.use(
     (0, import_cors.default)({
-      origin: config.corsOrigin === "*" ? true : config.corsOrigin.split(",")
+      origin: config.corsOrigin === "*" ? true : config.corsOrigin.split(","),
+      credentials: true
     })
   );
   app.use((0, import_cookie_parser.default)());

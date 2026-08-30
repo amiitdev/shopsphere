@@ -37,6 +37,7 @@ export function createApp(): Express {
   app.use(
     cors({
       origin: config.corsOrigin === "*" ? true : config.corsOrigin.split(","),
+      credentials: true,
     })
   );
   app.use(cookieParser());
