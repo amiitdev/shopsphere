@@ -70,8 +70,10 @@ export async function deleteProduct(req: Request, res: Response) {
 }
 
 export async function uploadProductImage(req: Request, res: Response) {
-  if (!req.file || !req.file.filename) throw new HttpError(400, "No image file provided");
-  res.status(201).json({ url: `/uploads/${req.file.filename}` });
+  if (!req.file) throw new HttpError(400, "No image file provided");
+  // Cloudinary returns URL in req.file.path; local disk uses /uploads/filename
+  const url = req.file.path || `/uploads/${req.file.filename}`;
+  res.status(201).json({ url });
 }
 
 export async function getAllOrdersForAdmin(req: Request, res: Response) {

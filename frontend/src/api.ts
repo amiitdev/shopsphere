@@ -17,7 +17,7 @@ export interface AdminProductInput {
   image: string;
 }
 
-const BASE = "/api";
+const BASE = import.meta.env.VITE_API_URL || "/api";
 
 async function handle<T>(res: Response): Promise<T> {
   if (!res.ok) {

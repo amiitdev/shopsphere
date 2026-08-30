@@ -20,6 +20,7 @@ export const config = {
   authTokenName: process.env.AUTH_TOKEN_NAME ?? "ss_token",
   geminiApiKey: process.env.GEMINI_API_KEY ?? "",
   geminiModel: process.env.GEMINI_MODEL ?? "gemini-2.5-flash",
+  cloudinaryUrl: process.env.CLOUDINARY_URL ?? "",
 };
 
 export function isProduction(): boolean {

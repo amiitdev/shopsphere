@@ -4,6 +4,7 @@ import crypto from "node:crypto";
 import fs from "node:fs";
 import { fileURLToPath } from "node:url";
 import { HttpError } from "./errorHandler";
+import { config } from "../config";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 export const uploadsDir = path.join(__dirname, "..", "..", "uploads");
@@ -19,19 +20,53 @@ const EXT_BY_MIME: Record<string, string> = {
   "image/webp": ".webp",
 };
 
-export const uploadImage = multer({
-  storage: multer.diskStorage({
-    destination: uploadsDir,
-    filename: (_req, file, cb) => {
-      const ext = EXT_BY_MIME[file.mimetype] ?? "";
-      cb(null, `${Date.now()}-${crypto.randomBytes(6).toString("hex")}${ext}`);
+function createUpload(): multer.Multer {
+  // Cloudinary storage for Vercel
+  if (config.cloudinaryUrl) {
+    // eslint-disable-next-line @typescript-eslint/no-var-requires
+    const { CloudinaryStorage } = require("multer-storage-cloudinary");
+    // eslint-disable-next-line @typescript-eslint/no-var-requires
+    const cloudinary = require("cloudinary").v2;
+    cloudinary.config({ cloudinary_url: config.cloudinaryUrl });
+
+    const storage = new CloudinaryStorage({
+      cloudinary,
+      params: {
+        folder: "shopsphere/uploads",
+        allowed_formats: ["png", "jpg", "jpeg", "webp"],
+        transformation: [{ width: 800, height: 800, crop: "limit" }],
+      },
+    });
+
+    return multer({
+      storage,
+      limits: { fileSize: MAX_UPLOAD_BYTES },
+      fileFilter: (_req: any, file: any, cb: any) => {
+        if (!ALLOWED_MIME.has(file.mimetype)) {
+          return cb(new HttpError(400, "Only PNG, JPEG, or WebP images are allowed"));
+        }
+        cb(null, true);
+      },
+    });
+  }
+
+  // Local disk storage for development
+  return multer({
+    storage: multer.diskStorage({
+      destination: uploadsDir,
+      filename: (_req, file, cb) => {
+        const ext = EXT_BY_MIME[file.mimetype] ?? "";
+        cb(null, `${Date.now()}-${crypto.randomBytes(6).toString("hex")}${ext}`);
+      },
+    }),
+    limits: { fileSize: MAX_UPLOAD_BYTES },
+    fileFilter: (_req, file, cb) => {
+      if (!ALLOWED_MIME.has(file.mimetype)) {
+        return cb(new HttpError(400, "Only PNG, JPEG, or WebP images are allowed"));
+      }
+      cb(null, true);
     },
-  }),
-  limits: { fileSize: MAX_UPLOAD_BYTES },
-  fileFilter: (_req, file, cb) => {
-    if (!ALLOWED_MIME.has(file.mimetype)) {
-      return cb(new HttpError(400, "Only PNG, JPEG, or WebP images are allowed"));
-    }
-    cb(null, true);
-  },
-});
+  });
+}
+
+export const uploadImage = createUpload();
