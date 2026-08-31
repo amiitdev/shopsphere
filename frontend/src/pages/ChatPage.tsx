@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 import { aiChat } from "../api";
 import { FaSpinner, FaPaperPlane } from "react-icons/fa";
 
@@ -56,7 +56,11 @@ export default function ChatPage() {
             {msg.products && msg.products.length > 0 && (
               <div className="chat-product-grid">
                 {msg.products.map((p) => (
-                  <div key={p._id} className="chat-product-card">
+                  <Link
+                    key={p._id}
+                    to={`/product/${p._id}`}
+                    className="chat-product-card"
+                  >
                     <img src={p.image} alt={p.title} className="chat-product-img" />
                     <div className="chat-product-info">
                       <span className="chat-product-title">{p.title}</span>
@@ -66,7 +70,7 @@ export default function ChatPage() {
                         <span className="chat-product-rating">★ {p.rating.rate} ({p.rating.count})</span>
                       </div>
                     </div>
-                  </div>
+                  </Link>
                 ))}
               </div>
             )}
