@@ -2,6 +2,8 @@
 
 > **Teaching Guide**: This file is designed so anyone can learn to build a production
 > e-commerce app using Claude Code. Follow the agents, prompts, and workflow below.
+> 
+> **Quick Start**: See `STUDENT-GUIDE.md` for copy-paste prompts to build from scratch.
 
 ## What Is ShopSphere?
 
