@@ -165,12 +165,12 @@ http://localhost:5173
 
 ---
 
-## 🔑 Default Credentials
+## 🔑 User Registration
 
-| Role | Email | Password |
-|------|-------|----------|
-| Admin | `admin@shopsphere.com` | `admin123` |
-| User | Register via `/signup` | — |
+| Action | How |
+|--------|-----|
+| Create account | Register via `/signup` |
+| Admin access | Create account, then update role in MongoDB |
 
 ---
 
