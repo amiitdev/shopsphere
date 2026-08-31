@@ -1,0 +1,313 @@
+- generic [ref=f5e2]:
+  - navigation [ref=f5e3]:
+    - generic [ref=f5e4]:
+      - link "ShopSphere ShopSphere" [ref=f5e5] [cursor=pointer]:
+        - /url: /
+        - img "ShopSphere" [ref=f5e23]
+        - generic [ref=f5e6]: ShopSphere
+      - button "Toggle menu" [ref=f5e7] [cursor=pointer]
+      - generic:
+        - generic: ShopSphere Admin
+        - link "Orders":
+          - /url: /orders
+        - link "Admin":
+          - /url: /admin
+        - button "Logout"
+        - generic:
+          - button "Choose accent color"
+        - button "Toggle theme": ☀
+  - main [ref=f5e18]:
+    - generic [ref=f5e24]:
+      - generic [ref=f5e25]:
+        - button "Close admin menu" [expanded] [active] [ref=f5e373] [cursor=pointer]
+        - generic [ref=f5e29]: Admin Panel
+        - link "Back to store" [ref=f5e32] [cursor=pointer]:
+          - /url: /
+      - navigation [ref=f5e376]:
+        - heading "Admin Panel" [level=2] [ref=f5e377]
+        - link "Dashboard" [ref=f5e380] [cursor=pointer]:
+          - /url: /admin
+        - link "Products" [ref=f5e383] [cursor=pointer]:
+          - /url: /admin/products
+        - link "Orders" [ref=f5e386] [cursor=pointer]:
+          - /url: /admin/orders
+        - link "Reviews" [ref=f5e389] [cursor=pointer]:
+          - /url: /admin/reviews
+        - link "Back to Store" [ref=f5e392] [cursor=pointer]:
+          - /url: /
+      - main [ref=f5e35]:
+        - generic [ref=f5e36]:
+          - generic [ref=f5e37]:
+            - heading "Product Management" [level=1] [ref=f5e38]
+            - searchbox "Search products" [ref=f5e42]
+          - paragraph [ref=f5e43]: 20 products found
+          - generic [ref=f5e44]:
+            - heading "Create Product" [level=2] [ref=f5e45]
+            - generic [ref=f5e46]:
+              - generic [ref=f5e47]:
+                - generic [ref=f5e48]: Title
+                - textbox "Title" [ref=f5e49]:
+                  - /placeholder: Product name
+              - generic [ref=f5e50]:
+                - generic [ref=f5e51]: Price ($)
+                - textbox "Price ($)" [ref=f5e52]:
+                  - /placeholder: "0.00"
+              - generic [ref=f5e53]:
+                - generic [ref=f5e54]: Category
+                - textbox "Category" [ref=f5e55]:
+                  - /placeholder: e.g. electronics, home, clothing
+              - generic [ref=f5e56]:
+                - generic [ref=f5e57]: Description
+                - textbox "Description" [ref=f5e58]:
+                  - /placeholder: Product description
+              - generic [ref=f5e59]:
+                - generic [ref=f5e60]: Image
+                - generic [ref=f5e61]:
+                  - combobox "/images/01-headphones.png or https://…" [ref=f5e62]: /images/
+                  - button "Upload" [ref=f5e63] [cursor=pointer]
+                - paragraph [ref=f5e66]: PNG, JPEG or WebP · max 5MB · or paste a URL above
+            - button "Create Product" [ref=f5e68] [cursor=pointer]
+          - table [ref=f5e71]:
+            - rowgroup [ref=f5e72]:
+              - row [ref=f5e73]:
+                - cell [ref=f5e74]:
+                  - img "Artisan Olive Wood Cutting Board" [ref=f5e75]
+                - cell "Title Artisan Olive Wood Cutting Board" [ref=f5e76]
+                - cell "Price $74.00" [ref=f5e77]
+                - cell "Category home" [ref=f5e78]:
+                  - text: Category
+                  - generic [ref=f5e79]: home
+                - cell [ref=f5e80]:
+                  - generic [ref=f5e81]:
+                    - button "Edit" [ref=f5e82] [cursor=pointer]
+                    - button "Delete" [ref=f5e85] [cursor=pointer]
+              - row [ref=f5e88]:
+                - cell [ref=f5e89]:
+                  - img "Bamboo Wireless Charging Pad" [ref=f5e90]
+                - cell "Title Bamboo Wireless Charging Pad" [ref=f5e91]
+                - cell "Price $39.99" [ref=f5e92]
+                - cell "Category electronics" [ref=f5e93]:
+                  - text: Category
+                  - generic [ref=f5e94]: electronics
+                - cell [ref=f5e95]:
+                  - generic [ref=f5e96]:
+                    - button "Edit" [ref=f5e97] [cursor=pointer]
+                    - button "Delete" [ref=f5e100] [cursor=pointer]
+              - row [ref=f5e103]:
+                - cell [ref=f5e104]:
+                  - img "Brushed Gold Pendant Necklace" [ref=f5e105]
+                - cell "Title Brushed Gold Pendant Necklace" [ref=f5e106]
+                - cell "Price $145.00" [ref=f5e107]
+                - cell "Category jewelry" [ref=f5e108]:
+                  - text: Category
+                  - generic [ref=f5e109]: jewelry
+                - cell [ref=f5e110]:
+                  - generic [ref=f5e111]:
+                    - button "Edit" [ref=f5e112] [cursor=pointer]
+                    - button "Delete" [ref=f5e115] [cursor=pointer]
+              - row [ref=f5e118]:
+                - cell [ref=f5e119]:
+                  - img "Cashmere Beanie" [ref=f5e120]
+                - cell "Title Cashmere Beanie" [ref=f5e121]
+                - cell "Price $65.00" [ref=f5e122]
+                - cell "Category clothing" [ref=f5e123]:
+                  - text: Category
+                  - generic [ref=f5e124]: clothing
+                - cell [ref=f5e125]:
+                  - generic [ref=f5e126]:
+                    - button "Edit" [ref=f5e127] [cursor=pointer]
+                    - button "Delete" [ref=f5e130] [cursor=pointer]
+              - row [ref=f5e133]:
+                - cell [ref=f5e134]:
+                  - img "Ceramic Pour-Over Coffee Set" [ref=f5e135]
+                - cell "Title Ceramic Pour-Over Coffee Set" [ref=f5e136]
+                - cell "Price $64.50" [ref=f5e137]
+                - cell "Category home" [ref=f5e138]:
+                  - text: Category
+                  - generic [ref=f5e139]: home
+                - cell [ref=f5e140]:
+                  - generic [ref=f5e141]:
+                    - button "Edit" [ref=f5e142] [cursor=pointer]
+                    - button "Delete" [ref=f5e145] [cursor=pointer]
+              - row [ref=f5e148]:
+                - cell [ref=f5e149]:
+                  - img "Hand-Blown Glass Vase" [ref=f5e150]
+                - cell "Title Hand-Blown Glass Vase" [ref=f5e151]
+                - cell "Price $52.00" [ref=f5e152]
+                - cell "Category home" [ref=f5e153]:
+                  - text: Category
+                  - generic [ref=f5e154]: home
+                - cell [ref=f5e155]:
+                  - generic [ref=f5e156]:
+                    - button "Edit" [ref=f5e157] [cursor=pointer]
+                    - button "Delete" [ref=f5e160] [cursor=pointer]
+              - row [ref=f5e163]:
+                - cell [ref=f5e164]:
+                  - img "Handmade Soy Candle Set" [ref=f5e165]
+                - cell "Title Handmade Soy Candle Set" [ref=f5e166]
+                - cell "Price $42.00" [ref=f5e167]
+                - cell "Category home" [ref=f5e168]:
+                  - text: Category
+                  - generic [ref=f5e169]: home
+                - cell [ref=f5e170]:
+                  - generic [ref=f5e171]:
+                    - button "Edit" [ref=f5e172] [cursor=pointer]
+                    - button "Delete" [ref=f5e175] [cursor=pointer]
+              - row [ref=f5e178]:
+                - cell [ref=f5e179]:
+                  - img "Italian Leather Messenger Bag" [ref=f5e180]
+                - cell "Title Italian Leather Messenger Bag" [ref=f5e181]
+                - cell "Price $198.00" [ref=f5e182]
+                - cell "Category accessories" [ref=f5e183]:
+                  - text: Category
+                  - generic [ref=f5e184]: accessories
+                - cell [ref=f5e185]:
+                  - generic [ref=f5e186]:
+                    - button "Edit" [ref=f5e187] [cursor=pointer]
+                    - button "Delete" [ref=f5e190] [cursor=pointer]
+              - row [ref=f5e193]:
+                - cell [ref=f5e194]:
+                  - img "Merino Wool Crew Neck" [ref=f5e195]
+                - cell "Title Merino Wool Crew Neck" [ref=f5e196]
+                - cell "Price $89.00" [ref=f5e197]
+                - cell "Category clothing" [ref=f5e198]:
+                  - text: Category
+                  - generic [ref=f5e199]: clothing
+                - cell [ref=f5e200]:
+                  - generic [ref=f5e201]:
+                    - button "Edit" [ref=f5e202] [cursor=pointer]
+                    - button "Delete" [ref=f5e205] [cursor=pointer]
+              - row [ref=f5e208]:
+                - cell [ref=f5e209]:
+                  - img "Midnight Pro Wireless Headphones" [ref=f5e210]
+                - cell "Title Midnight Pro Wireless Headphones" [ref=f5e211]
+                - cell "Price $189.99" [ref=f5e212]
+                - cell "Category electronics" [ref=f5e213]:
+                  - text: Category
+                  - generic [ref=f5e214]: electronics
+                - cell [ref=f5e215]:
+                  - generic [ref=f5e216]:
+                    - button "Edit" [ref=f5e217] [cursor=pointer]
+                    - button "Delete" [ref=f5e220] [cursor=pointer]
+              - row [ref=f5e223]:
+                - cell [ref=f5e224]:
+                  - img "Minimalist Rose Gold Watch" [ref=f5e225]
+                - cell "Title Minimalist Rose Gold Watch" [ref=f5e226]
+                - cell "Price $249.00" [ref=f5e227]
+                - cell "Category jewelry" [ref=f5e228]:
+                  - text: Category
+                  - generic [ref=f5e229]: jewelry
+                - cell [ref=f5e230]:
+                  - generic [ref=f5e231]:
+                    - button "Edit" [ref=f5e232] [cursor=pointer]
+                    - button "Delete" [ref=f5e235] [cursor=pointer]
+              - row [ref=f5e238]:
+                - cell [ref=f5e239]:
+                  - img "Organic Cotton Throw Blanket" [ref=f5e240]
+                - cell "Title Organic Cotton Throw Blanket" [ref=f5e241]
+                - cell "Price $79.99" [ref=f5e242]
+                - cell "Category home" [ref=f5e243]:
+                  - text: Category
+                  - generic [ref=f5e244]: home
+                - cell [ref=f5e245]:
+                  - generic [ref=f5e246]:
+                    - button "Edit" [ref=f5e247] [cursor=pointer]
+                    - button "Delete" [ref=f5e250] [cursor=pointer]
+              - row [ref=f5e253]:
+                - cell [ref=f5e254]:
+                  - img "Polished Marble Desk Organizer" [ref=f5e255]
+                - cell "Title Polished Marble Desk Organizer" [ref=f5e256]
+                - cell "Price $58.00" [ref=f5e257]
+                - cell "Category home" [ref=f5e258]:
+                  - text: Category
+                  - generic [ref=f5e259]: home
+                - cell [ref=f5e260]:
+                  - generic [ref=f5e261]:
+                    - button "Edit" [ref=f5e262] [cursor=pointer]
+                    - button "Delete" [ref=f5e265] [cursor=pointer]
+              - row [ref=f5e268]:
+                - cell [ref=f5e269]:
+                  - img "Precision Pour Gooseneck Kettle" [ref=f5e270]
+                - cell "Title Precision Pour Gooseneck Kettle" [ref=f5e271]
+                - cell "Price $85.00" [ref=f5e272]
+                - cell "Category home" [ref=f5e273]:
+                  - text: Category
+                  - generic [ref=f5e274]: home
+                - cell [ref=f5e275]:
+                  - generic [ref=f5e276]:
+                    - button "Edit" [ref=f5e277] [cursor=pointer]
+                    - button "Delete" [ref=f5e280] [cursor=pointer]
+              - row [ref=f5e283]:
+                - cell [ref=f5e284]:
+                  - img "Recycled Denim Jacket" [ref=f5e285]
+                - cell "Title Recycled Denim Jacket" [ref=f5e286]
+                - cell "Price $110.00" [ref=f5e287]
+                - cell "Category clothing" [ref=f5e288]:
+                  - text: Category
+                  - generic [ref=f5e289]: clothing
+                - cell [ref=f5e290]:
+                  - generic [ref=f5e291]:
+                    - button "Edit" [ref=f5e292] [cursor=pointer]
+                    - button "Delete" [ref=f5e295] [cursor=pointer]
+              - row [ref=f5e298]:
+                - cell [ref=f5e299]:
+                  - img "Silk Sleep Mask" [ref=f5e300]
+                - cell "Title Silk Sleep Mask" [ref=f5e301]
+                - cell "Price $28.00" [ref=f5e302]
+                - cell "Category accessories" [ref=f5e303]:
+                  - text: Category
+                  - generic [ref=f5e304]: accessories
+                - cell [ref=f5e305]:
+                  - generic [ref=f5e306]:
+                    - button "Edit" [ref=f5e307] [cursor=pointer]
+                    - button "Delete" [ref=f5e310] [cursor=pointer]
+              - row [ref=f5e313]:
+                - cell [ref=f5e314]:
+                  - img "Smart Home Hub Mini" [ref=f5e315]
+                - cell "Title Smart Home Hub Mini" [ref=f5e316]
+                - cell "Price $129.00" [ref=f5e317]
+                - cell "Category electronics" [ref=f5e318]:
+                  - text: Category
+                  - generic [ref=f5e319]: electronics
+                - cell [ref=f5e320]:
+                  - generic [ref=f5e321]:
+                    - button "Edit" [ref=f5e322] [cursor=pointer]
+                    - button "Delete" [ref=f5e325] [cursor=pointer]
+              - row [ref=f5e328]:
+                - cell [ref=f5e329]:
+                  - img "Sterling Silver Cuff" [ref=f5e330]
+                - cell "Title Sterling Silver Cuff" [ref=f5e331]
+                - cell "Price $120.00" [ref=f5e332]
+                - cell "Category jewelry" [ref=f5e333]:
+                  - text: Category
+                  - generic [ref=f5e334]: jewelry
+                - cell [ref=f5e335]:
+                  - generic [ref=f5e336]:
+                    - button "Edit" [ref=f5e337] [cursor=pointer]
+                    - button "Delete" [ref=f5e340] [cursor=pointer]
+              - row [ref=f5e343]:
+                - cell [ref=f5e344]:
+                  - img "Titanium Data Key 256GB" [ref=f5e345]
+                - cell "Title Titanium Data Key 256GB" [ref=f5e346]
+                - cell "Price $34.99" [ref=f5e347]
+                - cell "Category electronics" [ref=f5e348]:
+                  - text: Category
+                  - generic [ref=f5e349]: electronics
+                - cell [ref=f5e350]:
+                  - generic [ref=f5e351]:
+                    - button "Edit" [ref=f5e352] [cursor=pointer]
+                    - button "Delete" [ref=f5e355] [cursor=pointer]
+              - row [ref=f5e358]:
+                - cell [ref=f5e359]:
+                  - img "Ultralight Down Vest" [ref=f5e360]
+                - cell "Title Ultralight Down Vest" [ref=f5e361]
+                - cell "Price $168.00" [ref=f5e362]
+                - cell "Category clothing" [ref=f5e363]:
+                  - text: Category
+                  - generic [ref=f5e364]: clothing
+                - cell [ref=f5e365]:
+                  - generic [ref=f5e366]:
+                    - button "Edit" [ref=f5e367] [cursor=pointer]
+                    - button "Delete" [ref=f5e370] [cursor=pointer]
+  - button "Open AI chat" [ref=f5e20] [cursor=pointer]
+  - status

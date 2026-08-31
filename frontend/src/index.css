@@ -2343,7 +2343,7 @@ img {
 
 @media (max-width: 640px) {
   .product-form-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .admin-table {
@@ -2407,6 +2407,47 @@ img {
   .admin-row-actions .btn {
     padding: 0.25rem 0.5rem;
     white-space: nowrap;
+  }
+}
+
+@media (max-width: 400px) {
+  .admin-product-form {
+    padding: 1rem;
+  }
+  .admin-product-form .form-field {
+    min-width: 0;
+  }
+  .admin-product-form .form-field input,
+  .admin-product-form .form-field textarea,
+  .admin-product-form .admin-image-input-row input {
+    min-width: 0;
+    max-width: 100%;
+  }
+  .admin-order-card {
+    padding: 1rem;
+  }
+  .admin-order-top {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .admin-order-card .order-number {
+    font-size: 0.85rem;
+    word-break: break-all;
+  }
+  .admin-order-item-title {
+    white-space: normal;
+  }
+  .admin-order-thumb {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+  }
+  .admin-filters .btn {
+    padding: 0.35rem 0.6rem;
+    font-size: 0.8rem;
+  }
+  .admin-header h1 {
+    font-size: 1.25rem;
   }
 }
 
