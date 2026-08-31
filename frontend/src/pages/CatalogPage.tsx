@@ -19,11 +19,17 @@ export default function CatalogPage() {
   const [aiSearching, setAiSearching] = useState(false);
   const [aiResults, setAiResults] = useState<Product[]>([]);
   const [aiMessage, setAiMessage] = useState("");
+  const [page, setPage] = useState(1);
+  const [total, setTotal] = useState(0);
   const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const PAGE_SIZE = 12;
 
   useEffect(() => {
     if (timer.current) clearTimeout(timer.current);
-    timer.current = setTimeout(() => setSearch(searchInput.trim()), DEBOUNCE_MS);
+    timer.current = setTimeout(() => {
+      setSearch(searchInput.trim());
+      setPage(1);
+    }, DEBOUNCE_MS);
     return () => {
       if (timer.current) clearTimeout(timer.current);
     };
@@ -35,6 +41,8 @@ export default function CatalogPage() {
       .catch(() => setCategories([]));
   }, []);
 
+  useEffect(() => { setPage(1); }, [category]);
+
   const load = useCallback(async () => {
     setLoading(true);
     setError(null);
@@ -42,15 +50,17 @@ export default function CatalogPage() {
       const data = await fetchProducts({
         category: category || undefined,
         search: search || undefined,
-        limit: 50,
+        page,
+        limit: PAGE_SIZE,
       });
       setProducts(data.items);
+      setTotal(data.total);
     } catch {
       setError("Failed to load products.");
     } finally {
       setLoading(false);
     }
-  }, [category, search]);
+  }, [category, search, page]);
 
   useEffect(() => {
     if (!aiMode) void load();
@@ -162,6 +172,28 @@ export default function CatalogPage() {
           <ProductCard key={p._id} product={p} />
         ))}
       </div>
+
+      {!aiMode && total > PAGE_SIZE && (
+        <div className="pagination">
+          <button
+            className="btn btn-outline btn-sm"
+            onClick={() => setPage((p) => Math.max(1, p - 1))}
+            disabled={page === 1}
+          >
+            ← Prev
+          </button>
+          <span className="pagination-info">
+            Page {page} of {Math.ceil(total / PAGE_SIZE)} ({total} products)
+          </span>
+          <button
+            className="btn btn-outline btn-sm"
+            onClick={() => setPage((p) => p + 1)}
+            disabled={page >= Math.ceil(total / PAGE_SIZE)}
+          >
+            Next →
+          </button>
+        </div>
+      )}
     </section>
   );
 }

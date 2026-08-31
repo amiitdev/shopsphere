@@ -808,6 +808,21 @@ img {
 }
 
 /* ══════════════════════════════════════════
+   PAGINATION
+   ══════════════════════════════════════════ */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem 0;
+}
+.pagination-info {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* ══════════════════════════════════════════
    PRODUCT CARD
    ══════════════════════════════════════════ */
 .card {
