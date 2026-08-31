@@ -17,6 +17,7 @@ import AdminDashboard from "./pages/admin/AdminDashboard";
 import AdminProducts from "./pages/admin/AdminProducts";
 import AdminOrders from "./pages/admin/AdminOrders";
 import AdminReviews from "./pages/admin/AdminReviews";
+import ChatPage from "./pages/ChatPage";
 import ChatWidget from "./components/ChatWidget";
 
 export default function App() {
@@ -39,14 +40,15 @@ export default function App() {
           <Route path="/checkout" element={<CheckoutPage />} />
           <Route path="/order/:id" element={<OrderConfirmationPage />} />
           <Route path="/orders" element={<OrdersPage />} />
-          <Route element={<AdminRoute />}>
-            <Route path="/admin" element={<AdminLayout />}>
+          <Route element={<AdminRoute />}> 
+            <Route path="/admin" element={<AdminLayout />}> 
               <Route index element={<AdminDashboard />} />
               <Route path="products" element={<AdminProducts />} />
               <Route path="orders" element={<AdminOrders />} />
               <Route path="reviews" element={<AdminReviews />} />
             </Route>
           </Route>
+          <Route path="/chat" element={<ChatPage />} />
         </Routes>
       </main>
       <ChatWidget />
