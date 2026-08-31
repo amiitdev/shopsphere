@@ -1,6 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "vercel-build": "cd backend && npm run vercel-build"
+    "vercel-build": "cd backend && npm run vercel-build",
+    "build": "cd frontend && npm run build"
   }
 }
