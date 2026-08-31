@@ -183,7 +183,7 @@ export default function CatalogPage() {
             ← Prev
           </button>
           <span className="pagination-info">
-            Page {page} of {Math.ceil(total / PAGE_SIZE)} ({total} products)
+            Page {page} of {Math.ceil(total / PAGE_SIZE)}
           </span>
           <button
             className="btn btn-outline btn-sm"
