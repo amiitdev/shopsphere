@@ -2345,12 +2345,68 @@ img {
   .product-form-grid {
     grid-template-columns: 1fr;
   }
+
   .admin-table {
     display: block;
-    overflow-x: auto;
+    width: 100%;
+    overflow: visible;
+  }
+  .admin-table thead {
+    display: none;
+  }
+  .admin-table,
+  .admin-table tbody,
+  .admin-table tr,
+  .admin-table td {
+    display: block;
+    width: 100%;
+  }
+  .admin-table tbody {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+  }
+  .admin-table tr {
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    background: var(--surface);
+    padding: 0.75rem 1rem;
+    box-sizing: border-box;
+  }
+  .admin-table td {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.35rem 0;
+    border: none;
+    font-size: 0.9rem;
+  }
+  .admin-table td::before {
+    content: attr(data-label);
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--text-muted);
+    flex-shrink: 0;
+  }
+  .admin-table td[data-label="Image"] {
+    justify-content: flex-start;
+  }
+  .admin-table td[data-label="Image"]::before {
+    display: none;
+  }
+  .admin-table td[data-label="Actions"] {
+    justify-content: flex-end;
+    margin-top: 0.25rem;
+  }
+  .admin-table td[data-label="Actions"]::before {
+    display: none;
   }
   .admin-row-actions .btn {
     padding: 0.25rem 0.5rem;
+    white-space: nowrap;
   }
 }
 

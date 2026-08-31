@@ -319,15 +319,15 @@ export default function AdminProducts() {
           <tbody>
             {products.map((p) => (
               <tr key={p._id}>
-                <td>
+                <td data-label="Image">
                   <img src={p.image} alt={p.title} className="admin-product-thumb" />
                 </td>
-                <td>{p.title}</td>
-                <td>${p.price.toFixed(2)}</td>
-                <td>
+                <td data-label="Title">{p.title}</td>
+                <td data-label="Price">${p.price.toFixed(2)}</td>
+                <td data-label="Category">
                   <span className="badge">{p.category}</span>
                 </td>
-                <td>
+                <td data-label="Actions">
                   <div className="admin-row-actions">
                     <button
                       className="btn btn-outline btn-xs"

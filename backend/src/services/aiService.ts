@@ -92,10 +92,32 @@ function productCatalogContext(products: ProductDocument[]): string {
     .join("\n");
 }
 
+function localKeywordSearch(query: string, products: ProductDocument[]): ProductDocument[] {
+  const tokens = query.toLowerCase().split(/\s+/).filter((t) => t.length > 1);
+  if (tokens.length === 0) return [];
+  return products
+    .map((p) => {
+      const haystack = `${p.title} ${p.category} ${p.description}`.toLowerCase();
+      let score = 0;
+      let matched = 0;
+      for (const t of tokens) {
+        if (haystack.includes(t)) {
+          score += t.length;
+          matched += 1;
+        }
+      }
+      return { p, score, matched };
+    })
+    .filter((r) => r.matched > 0)
+    .sort((a, b) => b.score - a.score)
+    .slice(0, 4)
+    .map((r) => r.p);
+}
+
 function cleanJsonReply(text: string): string {
   return text
-    .replace(/<think>[\s\S]*?<\/think>/gi, "")
-    .replace(/<think>[\s\S]*$/gi, "")
+    .replace(/ thinking[\s\S]*?<\/think>/gi, "")
+    .replace(/ thinking[\s\S]*$/gi, "")
     .replace(/<thinking>[\s\S]*?<\/thinking>/gi, "")
     .replace(/<thinking>[\s\S]*$/gi, "")
     .replace(/```json\n?/g, "")
@@ -141,7 +163,21 @@ STRICT RULES:
     { role: "user", content: userMessage },
   ];
 
-  const reply = await llmChat(messages);
+  let reply: string;
+  try {
+    reply = await llmChat(messages);
+  } catch (err) {
+    const fallback = localKeywordSearch(userMessage, products);
+    if (fallback.length > 0) {
+      const lines = fallback
+        .map((p, i) => `[PID:${String(p._id)}] ${p.title} - $${p.price}`)
+        .join("\n");
+      reply = `I found these matching products in our catalog:\n${lines}`;
+    } else {
+      reply =
+        "I couldn't find an exact match in our catalog, but I can help you look around! Check out the Browse Products page.";
+    }
+  }
 
   // Extract product IDs from [PID:xxx] tags
   const pidMatches = [...reply.matchAll(/\[PID:([a-f0-9]{24})\]/g)];
@@ -269,7 +305,15 @@ Rules:
 - Consider: category match, complementary products, price range, rating quality
 - Return ONLY the JSON array, nothing else.`;
 
-  const reply = await llmChat([{ role: "user", content: prompt }]);
+  let reply: string;
+  try {
+    reply = await llmChat([{ role: "user", content: prompt }]);
+  } catch {
+    return others.slice(0, limit).map((p) => ({
+      productId: String(p._id),
+      reason: "Popular in this category",
+    }));
+  }
 
   try {
     const cleaned = cleanJsonReply(reply);

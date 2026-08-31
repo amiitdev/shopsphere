@@ -1,0 +1,2 @@
+[    2740ms] [ERROR] Failed to load resource: the server responded with a status of 401 () @ https://shopsphere-api-two.vercel.app/api/auth/me:0
+[    2881ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://shopsphere-api-two.vercel.app/api/cart/1f71e2f7-76cf-4775-a3e7-638fe6b9dfad:0
