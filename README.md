@@ -10,9 +10,33 @@
 ![MongoDB](https://img.shields.io/badge/MongoDB-8-47A248?logo=mongodb)
 ![Gemini AI](https://img.shields.io/badge/Gemini-2.5-4285F4?logo=google)
 
-[Live Demo](#) • [Report Bug](https://github.com/amiitdev/shopsphere/issues) • [Request Feature](https://github.com/amiitdev/shopsphere/issues)
+[Live Demo](https://shopsphere-phi-nine.vercel.app) • [Report Bug](https://github.com/amiitdev/shopsphere/issues) • [Request Feature](https://github.com/amiitdev/shopsphere/issues)
 
 </div>
+
+---
+
+## 📸 Screenshots
+
+### Home Page — Dark Theme
+![Home Dark](docs/screenshots/home-dark.png)
+
+### Home Page — Light Theme
+![Home Light](docs/screenshots/home-light.png)
+
+### Product Detail
+![Product Detail](docs/screenshots/product-detail.png)
+
+### AI Shopping Assistant
+![AI Chat](docs/screenshots/ai-chat.png)
+
+### Admin Dashboard
+![Admin Dashboard](docs/screenshots/admin-dashboard.png)
+
+### Mobile Responsive
+| Dark Theme | Light Theme |
+|:---:|:---:|
+| ![Mobile Dark](docs/screenshots/mobile-dark.png) | ![Mobile Light](docs/screenshots/mobile-light.png) |
 
 ---
 
@@ -25,10 +49,11 @@
 - **Recommendations** — "You Might Also Like" on every product page
 
 ### 🛒 E-Commerce Core
-- Product catalog with 20 AI-generated product images
+- Product catalog with 40 AI-generated product images
 - Shopping cart with persistent state
 - Checkout flow with simulated payment
 - Order history and tracking
+- Pagination with 12 products per page
 
 ### 👤 Authentication & Authorization
 - Email + password signup/login with bcrypt
@@ -51,7 +76,7 @@
 - Dark theme by default with light toggle
 - Responsive design (mobile → desktop)
 - Animated toasts and notifications
-- Floating AI chat widget
+- AI chat with full-screen page
 
 ---
 
@@ -66,7 +91,7 @@ shopsphere/
 │   │   ├── models/          # Mongoose schemas (Product, User, Order, Review, Cart)
 │   │   ├── routes/          # API routes
 │   │   ├── services/        # Business logic + AI integration
-│   │   ├── seed.ts          # Database seeder (20 products)
+│   │   ├── seed.ts          # Database seeder (40 products)
 │   │   └── index.ts         # Server entry
 │   └── tests/               # Backend tests (60+)
 ├── frontend/                # React + Vite + TypeScript
@@ -77,7 +102,7 @@ shopsphere/
 │   │   ├── api.ts           # API client functions
 │   │   └── App.tsx          # Router setup
 │   └── tests/               # Frontend tests
-└── docs/                    # ADRs, security reviews
+└── docs/                    # ADRs, security reviews, screenshots
 ```
 
 ---
@@ -117,7 +142,7 @@ cp backend/.env.example backend/.env
 ```bash
 cd backend
 npm run seed
-# Populates 20 products with AI-generated images
+# Populates 40 products with AI-generated images
 ```
 
 ### 4. Run Development Servers
@@ -154,9 +179,9 @@ http://localhost:5173
 ### Products
 | Method | Endpoint | Description |
 |--------|----------|-------------|
-| GET | `/api/products` | List products (supports `?search=`) |
+| GET | `/api/products` | List products (supports `?search=`, `?page=`, `?limit=`) |
 | GET | `/api/products/:id` | Get product by ID |
-| GET | `/api/categories` | List categories |
+| GET | `/api/products/categories` | List categories |
 
 ### Auth
 | Method | Endpoint | Description |
@@ -235,6 +260,7 @@ cd frontend && npm run typecheck
 | **Auth** | JWT + httpOnly cookies + bcrypt |
 | **Testing** | Vitest (frontend), Node test runner + supertest (backend) |
 | **Styling** | CSS custom properties, dark theme |
+| **Image Gen** | Google Flow (nano-banana-2 model) |
 
 ---
 
@@ -249,6 +275,13 @@ GEMINI_MODEL=gemini-2.5-flash
 PORT=4000
 CORS_ORIGIN=http://localhost:5173
 ```
+
+---
+
+## 🌐 Production
+
+- **Frontend**: [https://shopsphere-phi-nine.vercel.app](https://shopsphere-phi-nine.vercel.app)
+- **Backend API**: [https://shopsphere-api-two.vercel.app](https://shopsphere-api-two.vercel.app)
 
 ---
 
